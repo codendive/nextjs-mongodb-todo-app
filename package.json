@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@tailwindcss/postcss": "^4.1.4",
     "mongodb": "^6.15.0",
     "mongoose": "^8.13.2",
