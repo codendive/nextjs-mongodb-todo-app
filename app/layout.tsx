@@ -22,7 +22,7 @@ const RootLayout = ({
       <body
         className={`${goblinOne.className} bg-gradient-to-r from-blue-500 to-teal-400 text-zinc-100 bg-[length:200%_200%] animate-[gradientMove_10s_ease-in-out_infinite]`}
       >
-        {children}
+        <main className='container p-4 mx-auto'>{children}</main>
       </body>
     </html>
   )
