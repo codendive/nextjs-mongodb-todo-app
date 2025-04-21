@@ -17,6 +17,24 @@ export const addTodo = async (formData: FormData) => {
   redirect('/')
 }
 
+export const updateTodo = async (formData: FormData) => {
+  await connectDB()
+
+  const id = formData.get('id')
+
+  const description = formData.get('description')
+
+  const updatedTodo = await Todo.findByIdAndUpdate(
+    { _id: id },
+    { description: description },
+    { new: true }
+  )
+
+  if (!updatedTodo) throw new Error('Failed to update todo')
+
+  redirect('/')
+}
+
 export const deleteTodo = async (formData: FormData) => {
   await connectDB()
 

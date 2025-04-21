@@ -11,7 +11,7 @@ const TodoItem = ({ todo }: Props) => {
   return (
     <div
       key={todo._id}
-      className='flex items-center justify-between p-6 border shadow-lg bg-white/20 backdrop-blur-md rounded-xl border-white/10'
+      className='flex items-center justify-between p-6 border shadow-lg bg-white/10 backdrop-blur-md rounded-xl border-white/10'
     >
       <div className='flex flex-col space-y-2'>
         <h2 className='text-lg text-white'>{todo.description}</h2>
@@ -22,7 +22,7 @@ const TodoItem = ({ todo }: Props) => {
         <Link
           className='hover:text-white hover:animate-pulse'
           href={{
-            pathname: `/edit/${todo._id}`,
+            pathname: `/update/${todo._id}`,
             query: { description: todo.description }
           }}
         >
