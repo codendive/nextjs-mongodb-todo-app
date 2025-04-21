@@ -1,8 +1,9 @@
+import { deleteTodo } from '@/lib/actions/todo-actions'
 import { TrashIcon } from '@heroicons/react/24/outline'
 
 const DeleteButton = ({ id }: { id: string }) => {
   return (
-    <form>
+    <form action={deleteTodo}>
       <input type='hidden' name='id' value={id} />
       <button className='cursor-pointer'>
         <TrashIcon className='w-6 h-6' />

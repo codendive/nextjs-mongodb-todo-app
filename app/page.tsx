@@ -1,6 +1,6 @@
 import TodoList from '@/components/todo-list'
 
-const HomePage = async () => {
+const HomePage = () => {
   return (
     <div className='max-w-6xl'>
       <h1 className='mb-4 text-3xl font-bold text-center'>📋 My Todos</h1>
