@@ -20,6 +20,7 @@ const TodoItem = ({ todo }: Props) => {
       <div className='flex flex-col space-y-2'>
         <DeleteButton id={todo._id.toString()} />
         <Link
+          className='hover:text-white'
           href={{
             pathname: `/edit/${todo._id}`,
             query: { description: todo.description }
